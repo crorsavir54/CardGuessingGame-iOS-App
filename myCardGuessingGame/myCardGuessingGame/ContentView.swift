@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Card Memory Game")
+            Text("Card Memory Game Check")
                 .font(.largeTitle)
                 .fontWeight(.bold)
             GeometryReader{ geometry in
