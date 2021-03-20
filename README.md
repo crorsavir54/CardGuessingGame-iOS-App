@@ -2,5 +2,5 @@
 
 ## Screenshots:
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](https://github.com/crorsavir54/CardGuessingGame-iOS-App/blob/main/screenshot.png)
 
