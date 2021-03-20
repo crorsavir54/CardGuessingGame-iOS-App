@@ -1,1 +1,2 @@
-# CardGuessingGame-iOS-App
+# Card Guessing/Matching Game iOS App
+
