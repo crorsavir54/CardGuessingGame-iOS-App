@@ -2,4 +2,4 @@
 
 ## Screenshots:
 
-<img src="https://github.com/crorsavir54/CardGuessingGame-iOS-App/blob/main/screenshot.png" width="100">
+<img src="https://github.com/crorsavir54/CardGuessingGame-iOS-App/blob/main/screenshot.png" width="200">
