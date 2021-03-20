@@ -20,8 +20,10 @@ struct ContentView: View {
                 HStack{
                     Text("Score: \(score)" )
                         .bold()
-                        .padding()
+                        .font(Font.system(size: 20))
+                        .padding(.trailing)
                     ThemesView(viewModel: viewModel)
+                        .shadow(color: .gray, radius: 5, x: 0, y: 3)
                 }
                 Divider()
                 LazyVGrid(columns: columns){
@@ -33,7 +35,10 @@ struct ContentView: View {
                     }
                 }
                 
-            } .padding()
+            }
+            .padding()
+            .foregroundColor(.pink)
+            
         }
         
     }
@@ -47,8 +52,13 @@ struct CardView: View {
         GeometryReader{ geometry in
             ZStack {
                 if card.isFaceUp {
+                    
+                    RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: strokeWidth)
+                        .background(Color.gray
+                                        .brightness(0.35))
+                                        .cornerRadius(10)
+                                        .shadow(color: .gray, radius: 2, x: 0, y: 2)
                     Text(card.content)
-                    RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(lineWidth: strokeWidth)
                     
                 }
                 else {
@@ -61,7 +71,6 @@ struct CardView: View {
                 }
                 
             }.font(Font.system(size: min(geometry.size.width, geometry.size.height) * sizeFactor))
-            .shadow(color: Color.primary.opacity(0.3), radius: 1)
         }
     }
     let strokeWidth: CGFloat = 3.0
