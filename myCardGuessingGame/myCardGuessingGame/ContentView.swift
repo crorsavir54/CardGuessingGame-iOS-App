@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel: EmojiMemoryGame // viewModel
     
-
+    
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 4) // TODO: calculated column count
     
     var body: some View {
@@ -18,17 +18,17 @@ struct ContentView: View {
         GeometryReader{ geometry in
             VStack {
                 HStack{
-                    Text(score)
+                    Text("Score: \(score)" )
                         .bold()
+                        .padding()
                     ThemesView(viewModel: viewModel)
                 }
-                
+                Divider()
                 LazyVGrid(columns: columns){
                     ForEach(viewModel.cards){ card in
                         CardView(card: card).onTapGesture {
                             viewModel.choose(card: card)
                         }.aspectRatio(geometry.size, contentMode: .fit).padding(5)
-
                         
                     }
                 }

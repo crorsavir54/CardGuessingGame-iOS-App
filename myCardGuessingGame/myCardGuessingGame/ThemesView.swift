@@ -16,7 +16,7 @@ struct ThemesView: View {
         }) {
             HStack {
                 Text("🧍🏻")
-                Text("Tao")
+                Text("1")
                     .font(.system(.body ,design: .rounded))
                     .fontWeight(.regular)
             }
@@ -31,11 +31,11 @@ struct ThemesView: View {
         }) {
             HStack {
                 Text("⚽️")
-                Text("Objects")
+                Text("2")
                     .font(.system(.body ,design: .rounded))
                     .fontWeight(.regular)
             }
-        
+            
             .padding()
             .background(Color.green)
             .foregroundColor(.white)
@@ -47,7 +47,7 @@ struct ThemesView: View {
         }) {
             HStack {
                 Text("🦁")
-                Text("Animals")
+                Text("3")
                     .font(.system(.body ,design: .rounded))
                     .fontWeight(.regular)
             }

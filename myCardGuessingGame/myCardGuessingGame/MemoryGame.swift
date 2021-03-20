@@ -12,7 +12,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
     var previousCardIndex: Int?
     var emojis = Emojis().emojis
     var score = Emojis().score
-
+    
     init(noOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
         for pairIndex in 0..<noOfPairsOfCards{
@@ -35,7 +35,7 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
             score = 0
         }
     }
-
+    
     mutating func choose(card: Card) {
         print("Card chosen is: \(card) ")
         
