@@ -2,5 +2,4 @@
 
 ## Screenshots:
 
-![Image of Yaktocat](https://github.com/crorsavir54/CardGuessingGame-iOS-App/blob/main/screenshot.png)
-
+<img src="https://github.com/crorsavir54/CardGuessingGame-iOS-App/blob/main/screenshot.png" width="100">
