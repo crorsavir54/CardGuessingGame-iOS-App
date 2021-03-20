@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0167CA226065FFC00A49EC0 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0167CA126065FFC00A49EC0 /* Emojis.swift */; };
+		D0167CA5260693F900A49EC0 /* ThemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0167CA4260693F900A49EC0 /* ThemesView.swift */; };
 		D07D502925CEEDFA00159EF4 /* myCardGuessingGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D502825CEEDFA00159EF4 /* myCardGuessingGameApp.swift */; };
 		D07D502B25CEEDFA00159EF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D502A25CEEDFA00159EF4 /* ContentView.swift */; };
 		D07D502D25CEEDFD00159EF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D07D502C25CEEDFD00159EF4 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0167CA126065FFC00A49EC0 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
+		D0167CA4260693F900A49EC0 /* ThemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesView.swift; sourceTree = "<group>"; };
 		D07D502525CEEDFA00159EF4 /* myCardGuessingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myCardGuessingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07D502825CEEDFA00159EF4 /* myCardGuessingGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCardGuessingGameApp.swift; sourceTree = "<group>"; };
 		D07D502A25CEEDFA00159EF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,8 +62,10 @@
 			children = (
 				D07D502825CEEDFA00159EF4 /* myCardGuessingGameApp.swift */,
 				D07D502A25CEEDFA00159EF4 /* ContentView.swift */,
+				D0167CA4260693F900A49EC0 /* ThemesView.swift */,
 				D07D503F25CEEE6200159EF4 /* EmojiMemoryGame.swift */,
 				D07D503C25CEEE4900159EF4 /* MemoryGame.swift */,
+				D0167CA126065FFC00A49EC0 /* Emojis.swift */,
 				D07D502C25CEEDFD00159EF4 /* Assets.xcassets */,
 				D07D503125CEEDFD00159EF4 /* Info.plist */,
 				D07D502E25CEEDFD00159EF4 /* Preview Content */,
@@ -146,7 +152,9 @@
 			files = (
 				D07D503D25CEEE4900159EF4 /* MemoryGame.swift in Sources */,
 				D07D502B25CEEDFA00159EF4 /* ContentView.swift in Sources */,
+				D0167CA226065FFC00A49EC0 /* Emojis.swift in Sources */,
 				D07D502925CEEDFA00159EF4 /* myCardGuessingGameApp.swift in Sources */,
+				D0167CA5260693F900A49EC0 /* ThemesView.swift in Sources */,
 				D07D504025CEEE6200159EF4 /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

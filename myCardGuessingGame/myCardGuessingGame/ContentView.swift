@@ -9,52 +9,60 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: EmojiMemoryGame // viewModel
-                                  //  After this is called,
     
-    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 4)
+
+    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 4) // TODO: calculated column count
     
     var body: some View {
-        VStack {
-            Text("Card Memory Game Commint Check 2")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            GeometryReader{ geometry in
+        let score = String(viewModel.score)
+        GeometryReader{ geometry in
+            VStack {
+                HStack{
+                    Text(score)
+                        .bold()
+                    ThemesView(viewModel: viewModel)
+                }
                 
-                LazyVGrid(columns: columns, spacing: 10){
+                LazyVGrid(columns: columns){
                     ForEach(viewModel.cards){ card in
                         CardView(card: card).onTapGesture {
                             viewModel.choose(card: card)
-                        }
-                        .aspectRatio(CGSize(width: geometry.size.width, height: geometry.size.height), contentMode: .fit)
+                        }.aspectRatio(geometry.size, contentMode: .fit).padding(5)
+
+                        
                     }
                 }
-                .frame(maxHeight: geometry.size.height)
-                .padding()
-                .foregroundColor(.blue)
-            }
+                
+            } .padding()
         }
+        
     }
 }
 
 struct CardView: View {
     var card: MemoryGame<String>.Card //
+    
+    
     var body: some View {
         GeometryReader{ geometry in
             ZStack {
                 if card.isFaceUp {
-                    RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: strokeWidth)
                     Text(card.content)
+                    RoundedRectangle(cornerRadius: cornerRadius).strokeBorder(lineWidth: strokeWidth)
                     
                 }
                 else {
-                    RoundedRectangle(cornerRadius: 10).fill()
+                    if card.isMatched{
+                    }else{
+                        RoundedRectangle(cornerRadius: 10).fill(
+                            LinearGradient(gradient: Gradient(colors: [.pink, .purple, .pink]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                        )
+                    }
                 }
                 
             }.font(Font.system(size: min(geometry.size.width, geometry.size.height) * sizeFactor))
-            
             .shadow(color: Color.primary.opacity(0.3), radius: 1)
         }
-
     }
     let strokeWidth: CGFloat = 3.0
     let cornerRadius: CGFloat = 10.0
